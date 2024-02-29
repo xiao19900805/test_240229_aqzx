@@ -1,0 +1,40 @@
+#---------------------------------------------------------------------------------------------
+# 全局环境配置
+env:
+  name: 安全资讯开发环境
+  servers:
+    - { name: Olym, ip: 192.168.17.21, port: 22, username: root, password: gw1admin} # 统服
+    - { name: Im, ip: 192.168.17.22, port: 22, username: root, password: gw1admin} # 密九通
+    - { name: Zx, ip: 192.168.17.23, port: 22, username: root, password: gw1admin} # 资讯采编
+
+maxfail: 0
+
+#---------------------------------------------------------------------------------------------
+# 资讯采编平台
+webservice_Zx_conf:
+  baseurl: "https://192.168.17.23:8443"
+  Authorization: "Bearer a6fffe83-4343-4d22-8f2c-035f1f684eb3"
+
+#---------------------------------------------------------------------------------------------
+# 统一密码服务平台
+webservice_Olym_conf:
+  baseurl: "https://192.168.17.21:8443"
+  Authorization: "Bearer 0ea6e269-56f5-4262-89c2-71507718fff7"
+
+#---------------------------------------------------------------------------------------------
+# 性能参数
+locust_conf:
+  disable_webui: false # 禁用webui
+  webui_port: 8089
+  master_host: "127.0.0.1"
+  master_port: 5557
+  expected_workers: 1 # 期望连接的 worker 数量
+  user_count: 32 # 用户总数
+  spawn_rate: 1 # 每秒增加用户数
+  stop_later: 6000 # 测试时长
+
+#---------------------------------------------------------------------------------------------
+# 性能测试
+test_perf_conf:
+  sender_authorization: "3413642660XvcyWzmuO2vsOhbZTkUPVWWZQqXsNKHmgHHrTFdo"
+  receiver_authorization: "34137660345RvSwmTHjdgZnWmCAB0URgilFYajfYTGeFf5240P"
