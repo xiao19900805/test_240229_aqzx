@@ -1,4 +1,4 @@
 main_name: '资讯采编系统功能验收'
 func_list:
   - name: "01. Android 用户登录"
-    cmd_param: "test_240229_aqzx/test_types_support_client/test_login_androidusers.py"
+    cmd_param: "test_240229_aqzx/test_types_support_client/test_poco_demo.py"

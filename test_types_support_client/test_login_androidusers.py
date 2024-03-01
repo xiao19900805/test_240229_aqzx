@@ -1,7 +1,6 @@
-from poco.drivers.android.uiautomation import AndroidUiautomationPoco
-from airtest.core.android import Android
-# 链接指定设备
-dev1 = Android("127.0.0.1:7555")
-poco = AndroidUiautomationPoco(dev1, screenshot_each_action=False)
-print("start...")
-poco(text="国经纵横").long_click()
+#!/usr/bin/env python
+# _*_ coding:utf-8 _*_
+# @Time: 2024/3/1 16:38
+# @Author: xiaob
+# @File: test_login_androidusers.PY
+# @Desc: Android 用户登录
